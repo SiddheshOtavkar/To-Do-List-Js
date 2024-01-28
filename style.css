@@ -1,26 +1,147 @@
+/* Apply a modern CSS reset */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
+/* Set a common font-family for the entire document */
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #153677, #4e085f);
+} */
 
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #153677, #4e085f);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    120deg,
+    #fc5c7d,
+    #6a82fb
+  ); /* Gradient background with shades of pink and purple */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle box shadow for a lifted appearance */
+  border-radius: 15px; /* Rounded corners for a softer look */
 }
 
+/* Create a container for the entire page with responsive padding */
 .container {
   width: 100%;
-  min-width: 100vh;
+  min-height: 100vh;
   padding: 10px;
 }
 
-.todo-app{
-    width:100%;
-    max-width: 540px;
-    background: #fff;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.todo-app:hover {
+  transform: translateY(
+    -5px
+  ); /* Move the .todo-app up by 5 pixels when hovered */
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+/* .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+} 
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+*/
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: linear-gradient(
+    to right,
+    #ff3cac,
+    #784ba0,
+    #2b86c5
+  ); /* Rainbow gradient background for the button */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s ease; /* Smooth transition for the background color */
+  background-size: 200% 200%; /* Gradient size for a smoother transition */
+  animation: rainbowGradient 5s linear infinite; /* Animation for the rainbow effect */
+}
+
+button:hover {
+  background-position: right center; /* Shift the background position on hover for the gradient effect */
+}
+
+@keyframes rainbowGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
